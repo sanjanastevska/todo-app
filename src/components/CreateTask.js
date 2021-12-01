@@ -7,6 +7,15 @@ export default class CreateTask extends Component {
             task: '',
         }
     }
+
+    handleChange = (event) => {
+        this.setState({ task: event.target.value });
+    };
+    handleSubmit = (event) => {
+        event.preventDefault();
+        this.props.createTask(this.state.task);
+        this.setState({task: ''});
+    }
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
