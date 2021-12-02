@@ -17,6 +17,7 @@ export default class TaskList extends Component {
                             id={index}
                             deleteTask={this.props.deleteTask}
                             editTask = {this.props.editTask}
+                            toggleTask = {this.props.toggleTask}
                         />
                     ))}
                 </tbody>
